@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { database } from "../utils/users";
 
 export default function Login() {
@@ -34,25 +35,11 @@ export default function Login() {
     localStorage.setItem("Login", JSON.stringify([userData.username, item]));
   };
 
-  const TestName = JSON.parse(localStorage.getItem("Login"));
-
-  const LogOut = (e) => {
-    e.preventDefault();
-    window.location.reload();
-    localStorage.clear();
-  };
-
   const renderErrorMessage = (name) =>
     name === errorMessages.name && (
       <div className="error">{errorMessages.message}</div>
     );
 
-  //Here I try to make real time logged user...
-  const realTime = () => {
-    if (TestName !== []) {
-      setIsSubmitted(true);
-    }
-  };
   const renderForm = (
     <div className="form">
       <form onSubmit={handleSubmit}>
@@ -82,8 +69,7 @@ export default function Login() {
 
         {isSubmitted ? (
           <div>
-            User: {TestName[0]} is successfully logged in
-            <button onClick={LogOut}> Log Out </button>
+            <Navigate to="/login" />
           </div>
         ) : (
           renderForm
