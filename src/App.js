@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Authorized from "./components/Authorized";
+import NotFound from "./components/NotFound";
 
 import "./App.css";
 
@@ -22,13 +23,4 @@ const Home = () => {
     </div>
   );
 };
-const NotFound = () => {
-  return (
-    <div className="app">
-      <div className="login-form">
-        <div className="title"> PAGE NOT FOUND 404 </div>
-        Please go to <Link to="/">Main Page</Link>
-      </div>
-    </div>
-  );
-};
+

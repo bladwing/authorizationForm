@@ -8,15 +8,16 @@ export default function Authorized() {
     navMain("/");
     localStorage.clear();
   };
-  const TestName = JSON.parse(localStorage.getItem("Login"));
+  const userName = JSON.parse(localStorage.getItem("Login"));
 
   return (
     <div className="app">
       <div className="login-form">
         <div className="title">Logged in</div>
-        you are Authorized User: <h2>{TestName[0]}</h2> is successfully logged
-        in
-        <button onClick={LogOut}> Log Out </button>
+      <div className="Welcome"> Welcome: <b>{userName[1]}</b> <br /></div>
+        
+        <div className="User">User: <b>{userName[0]}</b></div>
+        <button className="LogOut" onClick={LogOut}> Log Out </button>
       </div>
     </div>
   );

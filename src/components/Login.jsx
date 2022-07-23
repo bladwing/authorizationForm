@@ -28,11 +28,8 @@ export default function Login() {
     }
   };
 
-  //here I try to make limited time....
-  const Test = (userData, ttl) => {
-    const now = new Date();
-    const item = { expiry: now.getTime() + ttl };
-    localStorage.setItem("Login", JSON.stringify([userData.username, item]));
+  const Test = (userData) => {
+    localStorage.setItem("Login", JSON.stringify([userData.username, userData.name]));
   };
 
   const renderErrorMessage = (name) =>
