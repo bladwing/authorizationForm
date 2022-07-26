@@ -19,7 +19,10 @@ export default function App() {
 const Home = () => {
   return (
     <div>
+     
       <Login />
+
+     
     </div>
   );
 };

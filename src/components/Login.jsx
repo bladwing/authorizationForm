@@ -29,7 +29,10 @@ export default function Login() {
   };
 
   const Test = (userData) => {
-    localStorage.setItem("Login", JSON.stringify([userData.username, userData.name]));
+    localStorage.setItem(
+      "Login",
+      JSON.stringify([userData.username, userData.name])
+    );
   };
 
   const renderErrorMessage = (name) =>
@@ -53,9 +56,15 @@ export default function Login() {
           {renderErrorMessage("uname")}
         </div>
         <div className="button-container">
-          <input type="submit" />
+          <button type="submit">Log In</button>
         </div>
       </form>
+
+      <div className="example">
+        Passwords for example: username: user1 password: pass1
+        <hr />
+        username: user2 password: pass2
+      </div>
     </div>
   );
 
