@@ -1,4 +1,4 @@
-# Simple authorithation form React.
+# Simple  authorization form React.
 
 
 
