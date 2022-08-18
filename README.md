@@ -29,7 +29,7 @@ also remove UserName from browser memory
 
 5) If you create wrong link for example: 
 https://authwindows.netlify.app/dgsfsd
-You recieve - 404 error page.
+You receive - 404 error page.
 
 
 To be continued....
