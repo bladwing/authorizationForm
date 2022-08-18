@@ -1,8 +1,9 @@
-კეთილი იყოს შენი მობრძანება
+# Simple authorithation form React.
 
 
 
-ავტორიზაციის ფირმუს გამოსაყენებლად დაგჭირდება შემდეგი მოქნედებები:
+
+## Installation instruction
 
 
 1) git clone git@github.com:bladwing/authorizationForm.git
@@ -10,23 +11,28 @@
 3) npm install
 4) npm start
 
-მომხმარებლის სახელი: user1 <br/> მომხმარებლის პაროლი: pass1
+UserName: user1 <br/> Password: pass1
 
-მომხმარებლის სახელი: user2 <br/> მომხმარებლის პაროლი: pass2
+UserName: user2 <br/> Password: pass2
 
 
 
-ფუნქციონალი:
+## Auth form functions.
 
-1) ავტორიზაცია გავლა,
-2) მომხმარებლის გვერძე გადამისამართება - ავტორიზაციის მერე.
-3) ბრაუზერის მეხსიერებაში(localStorage) მომხმარებლის სახელის შენახვა და გამოჩენა მომხმარებლის გვერძე.
-4) მომხმრებლის გვერდიდან გასხვლა (logout), 
-   1) ავტომატურად გადამისამრტება მთავარ გვერძე
-   2) წაშლა ბრაუზრის მეხსიერებიდან მომხმარებლის სახელის.
+1. Authorization with login and password.
+1. Checker - empty User/Password && Error if User/Password wrong.
+1. After authorization - redirect to User page.
+1. Save UserName in browser memory (localStorage) and display on UserPage
+1. Logout and automatical redirect to main page 
+also remove UserName from browser memory
+   
 
-5) არასწორი მისამარტის ჩაწერის შემთხვევაში შეწდომა - 404.
-
+5) If you create wrong link for example: 
+https://authwindows.netlify.app/dgsfsd
+You recieve - 404 error page.
 
 
 To be continued....
+
+
+![](https://i.imgur.com/ZCPtzo2.gif)
