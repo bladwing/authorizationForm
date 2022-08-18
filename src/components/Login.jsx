@@ -61,9 +61,9 @@ export default function Login() {
       </form>
 
       <div className="example">
-        Passwords for example: username: user1 password: pass1
+        Passwords for example: <br/> username: user1 <br/>  password: pass1
         <hr />
-        username: user2 password: pass2
+        username:  user2 <br/>  password: pass2
       </div>
     </div>
   );
