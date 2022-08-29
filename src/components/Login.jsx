@@ -16,16 +16,11 @@ export default function Login() {
 
     var { uname, pass } = document.forms[0];
     const userData = database.find((user) => user.username === uname.value);
-    if (userData) {
-      if (userData.password !== pass.value) {
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        Test(userData);
-        setIsSubmitted(true);
-      }
-    } else {
-      setErrorMessages({ name: "uname", message: errors.uname });
-    }
+    userData
+      ? userData.password !== pass.value
+        ? setErrorMessages({ name: "pass", message: errors.pass })
+        : Test(userData) || setIsSubmitted(true)
+      : setErrorMessages({ name: "uname", message: errors.uname });
   };
 
   const Test = (userData) => {
@@ -61,9 +56,9 @@ export default function Login() {
       </form>
 
       <div className="example">
-        Passwords for example: <br/> username: user1 <br/>  password: pass1
+        Passwords for example: <br /> username: user1 <br /> password: pass1
         <hr />
-        username:  user2 <br/>  password: pass2
+        username: user2 <br /> password: pass2
       </div>
     </div>
   );
